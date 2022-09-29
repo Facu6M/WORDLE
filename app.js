@@ -12,7 +12,7 @@ const options = {
 	}
 };
 
-fetch('https://1000-most-common-words.p.rapidapi.com/words/spanish?words_limit=1', options)
+fetch('https://1000-most-common-words.p.rapidapi.com/words/english?words_limit=1', options)
 .then(result => result.json())
 .finally(()=>{
     let loadingElement = document.querySelector('.loading')
@@ -131,7 +131,7 @@ fetch('https://1000-most-common-words.p.rapidapi.com/words/spanish?words_limit=1
             mainContainer.appendChild(newRow)
             return newRow;
         }else{
-            showResult(`Intentalo de nuevo, la respuesta correcta era "${word.toUpperCase()}"`)
+            showResult(`Try again, the correct answer was "${word.toUpperCase()}"`)
         }
 
     }
@@ -155,7 +155,7 @@ fetch('https://1000-most-common-words.p.rapidapi.com/words/spanish?words_limit=1
     function showResult(textMsg){
         resultElement.innerHTML = `
         <p>${textMsg}</p>
-        <button class="button">Reiniciar</button>`
+        <button class="button">Restart</button>`
 
         let resetBtn = document.querySelector('.button')
         resetBtn.addEventListener('click', ()=>{
