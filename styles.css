@@ -6,6 +6,11 @@ h1{
     color:white;
     text-align: center;
 }
+#text a {
+    height: 25px;
+    border-bottom: 3px solid rgb(36, 80, 18);
+}
+
 .main-container{
     display: flex;
     flex-direction: column;
